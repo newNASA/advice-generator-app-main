@@ -1,0 +1,112 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+
+:root[data-theme=dark] {
+  --bg-color: hsl(218, 23%, 16%);
+  --container: hsl(217, 19%, 24%);
+  --green: hsl(150, 100%, 66%);
+  --light-cyan: hsl(193, 38%, 86%);
+}
+
+:root[data-theme=light] {
+  --bg-color:hsl(216, 100%, 88%);
+  --container:hsl(0, 0%, 100%);
+  --green:hsl(218, 100%, 72%);
+  --light-cyan:hsl(217, 19%, 38%);
+}
+
+.theme-toggle-button {
+  position: absolute;
+  z-index: 1;
+  right: 12px;
+  top: 12px;
+  padding: 4px 12px;
+  border: 1px solid;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: normal;
+  background-color: transparent;
+  color: var(--green);
+  transition: 0.5s;
+  cursor: pointer;
+  border: 1px solid var(--green);
+}
+
+.theme-toggle-button:hover {
+  background-color: var(--green);
+  color: var(--bg-color);
+}
+
+body {
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.advice {
+  width: 600px;
+  padding: 40px;
+  background-color: var(--container);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  height: auto;
+}
+.advice p {
+  color: var(--green);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.advice h2 {
+  padding: 20px 0;
+  color: var(--light-cyan);
+  margin: 0;
+}
+.advice .img {
+  margin-bottom: 20px;
+  background-image: url(./images/pattern-divider-desktop.svg);
+  height: 20px;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-position: center;
+}
+.advice button {
+  outline: none;
+  border: none;
+  background-color: var(--green);
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 50%;
+  position: absolute;
+  transition: 0.5s;
+  cursor: pointer;
+  bottom: -27px;
+}
+.advice button:hover {
+  box-shadow: 0px 0px 53px 12px rgba(82, 255, 168, 0.71);
+  -webkit-box-shadow: 0px 0px 53px 12px rgba(82, 255, 168, 0.71);
+  -moz-box-shadow: 0px 0px 53px 12px rgba(82, 255, 168, 0.71);
+}
+
+@media screen and (max-width: 376px) {
+  .advice {
+    width: 350px;
+  }
+  .advice .img {
+    src: url(./images/pattern-divider-mobile.svg);
+  }
+  .advice button:hover {
+    box-shadow: none;
+  }
+}/*# sourceMappingURL=style.css.map */
